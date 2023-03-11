@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "hardhat compile",
-    "test:light": "hardhat test",
-    "test": "hardhat coverage"
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage"
   },
   "keywords": [],
   "author": "",
