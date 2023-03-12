@@ -2,6 +2,7 @@ const { expect } = require("chai");
 
 describe("StackingContract", function () {
     let psp22Token;
+    let reputationToken;
     let stackingContract;
     let owner;
     let addr1;
@@ -14,8 +15,12 @@ describe("StackingContract", function () {
         psp22Token = await PSP22Token.deploy();
         await psp22Token.deployed();
 
+        const ReputationToken = await ethers.getContractFactory("ReputationToken");
+        reputationToken = await ReputationToken.deploy();
+        await reputationToken.deployed();
+
         const StackingContract = await ethers.getContractFactory("StackingContract");
-        stackingContract = await StackingContract.deploy(psp22Token.address);
+        stackingContract = await StackingContract.deploy(psp22Token.address, reputationToken.address);
         await stackingContract.deployed();
     });
 
