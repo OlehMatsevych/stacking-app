@@ -49,3 +49,6 @@ npm run build
 // Test commands:
 npm run test
 npm run test:coverage
+
+
+![image](https://user-images.githubusercontent.com/59181255/224518618-d7f85369-f614-4843-8e88-66caec423fb9.png)
